@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -7,4 +8,11 @@ public class AudioManager : MonoBehaviour
 
     [Header("--Audio Clip--")]
     public AudioClip music;
+
+    private void Start()
+    {
+        musicSource.clip = music;
+        musicSource.Play();
+    }
 }
+
